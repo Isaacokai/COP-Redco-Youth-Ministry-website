@@ -1,0 +1,180 @@
+.team {
+  min-height: 100vh;
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 3rem;
+  gap: 1rem;
+}
+
+.headerLine {
+  width: 60px;
+  height: 3px;
+  background-color: #28a745;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.leadershipGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.leaderCard {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leaderCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.leaderImage {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #2c5aa0;
+  position: relative;
+}
+
+.leaderImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.leaderCard:hover .leaderImage img {
+  transform: scale(1.05);
+}
+
+.leaderName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.leaderTitle {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.missionSection {
+  background: linear-gradient(135deg, #2c5aa0 0%, #1e3f73 100%);
+  color: white;
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.missionSection h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.missionSection p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team {
+    padding: 2rem 0;
+  }
+  
+  .header {
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .leadershipGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .leaderCard {
+    padding: 1.5rem;
+  }
+  
+  .leaderImage {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .leaderName {
+    font-size: 1.1rem;
+  }
+  
+  .leaderTitle {
+    font-size: 0.9rem;
+  }
+  
+  .missionSection {
+    padding: 2rem;
+  }
+  
+  .missionSection h2 {
+    font-size: 1.5rem;
+  }
+  
+  .missionSection p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leadershipGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .leaderCard {
+    padding: 1rem;
+  }
+  
+  .leaderImage {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .missionSection {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,300 @@
+.gallery {
+  min-height: 100vh;
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Category Filter */
+.categoryFilter {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.categoryBtn {
+  background: white;
+  border: 2px solid #e9ecef;
+  color: #666;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.categoryBtn:hover {
+  border-color: #2c5aa0;
+  color: #2c5aa0;
+}
+
+.categoryBtn.active {
+  background: #2c5aa0;
+  border-color: #2c5aa0;
+  color: white;
+}
+
+/* Photo Grid */
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.photoItem {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.photoItem:hover {
+  transform: translateY(-5px);
+}
+
+.photoContainer {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.photo {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photoItem:hover .photo {
+  transform: scale(1.05);
+}
+
+.photoOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 1.5rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.photoItem:hover .photoOverlay {
+  transform: translateY(0);
+}
+
+.photoOverlay h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.photoOverlay p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.modalContent {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.closeBtn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.prevBtn,
+.nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  z-index: 1001;
+}
+
+.prevBtn {
+  left: -60px;
+}
+
+.nextBtn {
+  right: -60px;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.modalImage {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modalImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.modalInfo {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  text-align: center;
+  max-width: 500px;
+}
+
+.modalInfo h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.modalInfo p {
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gallery {
+    padding: 2rem 0;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .categoryFilter {
+    gap: 0.5rem;
+  }
+  
+  .categoryBtn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .photoGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .photo {
+    height: 200px;
+  }
+  
+  .modal {
+    padding: 1rem;
+  }
+  
+  .prevBtn,
+  .nextBtn {
+    font-size: 1.5rem;
+    padding: 0.75rem;
+  }
+  
+  .prevBtn {
+    left: -40px;
+  }
+  
+  .nextBtn {
+    right: -40px;
+  }
+  
+  .closeBtn {
+    top: -30px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .photoGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .categoryFilter {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .categoryBtn {
+    width: 200px;
+  }
+  
+  .prevBtn,
+  .nextBtn {
+    position: static;
+    transform: none;
+    margin: 1rem 0.5rem;
+  }
+  
+  .closeBtn {
+    top: -20px;
+    right: 10px;
+  }
+}

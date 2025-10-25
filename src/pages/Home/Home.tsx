@@ -29,7 +29,7 @@ const Home = () => {
           </div>
           <div className={styles.heroImage}>
             <img 
-              src="/api/placeholder/600/400" 
+              src="/images/home/Youth Ministry Gathering.png" 
               alt="Youth Ministry Gathering" 
               className={styles.heroImg}
             />

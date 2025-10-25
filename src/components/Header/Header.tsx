@@ -66,7 +66,7 @@ const Header = () => {
                 className={`${styles.navLink} ${location.pathname === '/team' ? styles.active : ''}`}
                 onClick={handleLinkClick}
               >
-                Team
+                Leadership
               </Link>
             </li>
             <li>

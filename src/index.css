@@ -14,9 +14,9 @@ html {
   --bg-primary: #ffffff;
   --bg-secondary: #f8f9fa;
   --bg-tertiary: #e9ecef;
-  --text-primary: #333333;
-  --text-secondary: #666666;
-  --text-muted: #999999;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #6b7280;
   --border-color: #e9ecef;
   --shadow: rgba(0, 0, 0, 0.1);
   --primary-color: #2c5aa0;
@@ -71,13 +71,13 @@ p {
 }
 
 a {
-  color: #2c5aa0;
+  color: var(--primary-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #1e3f73;
+  color: var(--primary-hover);
 }
 
 /* Utility classes */
@@ -93,9 +93,71 @@ a:hover {
   border: 0;
 }
 
+/* Text contrast utilities */
+.text-high-contrast {
+  color: var(--text-primary) !important;
+}
+
+.text-medium-contrast {
+  color: var(--text-secondary) !important;
+}
+
+.text-low-contrast {
+  color: var(--text-muted) !important;
+}
+
+/* Ensure good contrast on colored backgrounds */
+.bg-primary .text-primary,
+.bg-primary .text-secondary,
+.bg-primary .text-muted {
+  color: white !important;
+}
+
+.bg-secondary .text-primary {
+  color: var(--text-primary) !important;
+}
+
+.bg-secondary .text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+.bg-secondary .text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* White text on blue backgrounds */
+.hero,
+.hero *,
+.hero h1,
+.hero h2,
+.hero h3,
+.hero p,
+.hero span,
+.hero div,
+[style*="background: linear-gradient(135deg, #2c5aa0"],
+[style*="background: linear-gradient(135deg, #2c5aa0"] *,
+[style*="background-color: #2c5aa0"],
+[style*="background-color: #2c5aa0"] *,
+[style*="background-color: #1e3f73"],
+[style*="background-color: #1e3f73"] * {
+  color: white !important;
+}
+
+/* Specific blue background classes */
+.blue-bg,
+.blue-bg *,
+.blue-bg h1,
+.blue-bg h2,
+.blue-bg h3,
+.blue-bg p,
+.blue-bg span,
+.blue-bg div {
+  color: white !important;
+}
+
 /* Focus styles */
 *:focus {
-  outline: 2px solid #2c5aa0;
+  outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
 

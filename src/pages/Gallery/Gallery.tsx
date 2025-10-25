@@ -16,7 +16,7 @@ const Gallery = () => {
   const photos = [
     {
       id: 1,
-      src: '/api/placeholder/400/300',
+      src: '/images/home/Youth Ministry Gathering.png',
       alt: 'Youth Conference 2024',
       category: 'events',
       title: 'Annual Youth Conference',
@@ -32,7 +32,7 @@ const Gallery = () => {
     },
     {
       id: 3,
-      src: '/api/placeholder/400/300',
+      src: '/images/home/Youth Ministry Gathering.png',
       alt: 'Youth Fellowship',
       category: 'fellowship',
       title: 'Youth Fellowship Night',

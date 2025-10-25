@@ -32,7 +32,7 @@ const Blog = () => {
       author: "Youth Ministry Team",
       date: "March 10, 2024",
       category: "news",
-      image: "/api/placeholder/400/250",
+      image: "/images/home/Youth Ministry Gathering.png",
       readTime: "3 min read"
     },
     {

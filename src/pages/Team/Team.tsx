@@ -46,6 +46,23 @@ const Team = () => {
 
   return (
     <div className={styles.team}>
+      {/* Featured Section */}
+      <section className={styles.featuredSection}>
+        <div className={styles.container}>
+          <div className={styles.featuredContent}>
+            <div className={styles.featuredImage}>
+              <img src="/images/team/2.png" alt="Team Leadership" className={styles.featuredImg} />
+            </div>
+            <div className={styles.featuredText}>
+              <h2 className={styles.featuredTitle}>Our Leadership Team</h2>
+              <p className={styles.featuredDescription}>
+                Meet the dedicated leaders who guide our youth ministry with wisdom, passion, and commitment to spiritual growth and community service.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.headerLine}></div>

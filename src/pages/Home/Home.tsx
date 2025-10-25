@@ -72,7 +72,7 @@ const Home = () => {
               </div>
               <div className={styles.eventContent}>
                 <h3>Annual Youth Conference</h3>
-                <p className={styles.eventDate}>March 15-17, 2024</p>
+                <p className={styles.eventDate}>October 5-7, 2025</p>
                 <p className={styles.eventDescription}>
                   Join us for an inspiring weekend of worship, fellowship, and spiritual growth.
                 </p>
@@ -100,7 +100,7 @@ const Home = () => {
               </div>
               <div className={styles.eventContent}>
                 <h3>Community Service Day</h3>
-                <p className={styles.eventDate}>April 20, 2024</p>
+                <p className={styles.eventDate}>October 19, 2025</p>
                 <p className={styles.eventDescription}>
                   Making a difference in our community through service and love.
                 </p>

@@ -57,6 +57,33 @@
   padding: 0 20px;
 }
 
+/* Leadership Sections */
+.leadershipSection {
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 3rem;
+  gap: 1rem;
+}
+
+.sectionLine {
+  width: 60px;
+  height: 3px;
+  background-color: #28a745;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -141,6 +168,7 @@
   padding: 3rem;
   border-radius: 12px;
   text-align: center;
+  margin: 4rem 0 6rem 0;
 }
 
 .missionSection * {
@@ -187,6 +215,16 @@
   
   .featuredDescription {
     font-size: 1.1rem;
+  }
+  
+  .sectionHeader {
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
   }
   
   .header {
@@ -260,7 +298,17 @@
     height: 120px;
   }
   
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+  
+  .leadershipSection {
+    margin-bottom: 3rem;
+    padding: 1rem 0;
+  }
+  
   .missionSection {
     padding: 1.5rem;
+    margin: 3rem 0 4rem 0;
   }
 }

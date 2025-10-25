@@ -1,7 +1,7 @@
 import styles from './Team.module.css'
 
 const Team = () => {
-  const leadership = [
+  const nationalLeaders = [
     {
       name: "Apostle Ebenezer Hagan",
       title: "Youth Director",
@@ -44,6 +44,29 @@ const Team = () => {
     }
   ]
 
+  const districtLeaders = [
+    {
+      name: "District Leader 1",
+      title: "District Coordinator",
+      image: "/api/placeholder/200/200"
+    },
+    {
+      name: "District Leader 2",
+      title: "District Secretary",
+      image: "/api/placeholder/200/200"
+    },
+    {
+      name: "District Leader 3",
+      title: "District Treasurer",
+      image: "/api/placeholder/200/200"
+    },
+    {
+      name: "District Leader 4",
+      title: "District Member",
+      image: "/api/placeholder/200/200"
+    }
+  ]
+
   return (
     <div className={styles.team}>
       {/* Featured Section */}
@@ -64,22 +87,45 @@ const Team = () => {
       </section>
 
       <div className={styles.container}>
-        <div className={styles.header}>
-          <div className={styles.headerLine}></div>
-          <h1 className={styles.title}>LEADERSHIP</h1>
-        </div>
-        
-        <div className={styles.leadershipGrid}>
-          {leadership.map((leader, index) => (
-            <div key={index} className={styles.leaderCard}>
-              <div className={styles.leaderImage}>
-                <img src={leader.image} alt={leader.name} />
+        {/* National Leaders Section */}
+        <section className={styles.leadershipSection}>
+          <div className={styles.sectionHeader}>
+            <div className={styles.sectionLine}></div>
+            <h2 className={styles.sectionTitle}>NATIONAL LEADERS</h2>
+          </div>
+          
+          <div className={styles.leadershipGrid}>
+            {nationalLeaders.map((leader, index) => (
+              <div key={index} className={styles.leaderCard}>
+                <div className={styles.leaderImage}>
+                  <img src={leader.image} alt={leader.name} />
+                </div>
+                <h3 className={styles.leaderName}>{leader.name}</h3>
+                <p className={styles.leaderTitle}>{leader.title}</p>
               </div>
-              <h3 className={styles.leaderName}>{leader.name}</h3>
-              <p className={styles.leaderTitle}>{leader.title}</p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </section>
+
+        {/* District Leaders Section */}
+        <section className={styles.leadershipSection}>
+          <div className={styles.sectionHeader}>
+            <div className={styles.sectionLine}></div>
+            <h2 className={styles.sectionTitle}>DISTRICT LEADERS</h2>
+          </div>
+          
+          <div className={styles.leadershipGrid}>
+            {districtLeaders.map((leader, index) => (
+              <div key={index} className={styles.leaderCard}>
+                <div className={styles.leaderImage}>
+                  <img src={leader.image} alt={leader.name} />
+                </div>
+                <h3 className={styles.leaderName}>{leader.name}</h3>
+                <p className={styles.leaderTitle}>{leader.title}</p>
+              </div>
+            ))}
+          </div>
+        </section>
         
         <div className={styles.missionSection}>
           <h2>Our Mission</h2>

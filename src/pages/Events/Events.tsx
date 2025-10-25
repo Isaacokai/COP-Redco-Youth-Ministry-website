@@ -3,14 +3,15 @@ import { format, addMonths, subMonths, startOfMonth, endOfMonth, eachDayOfInterv
 import styles from './Events.module.css'
 
 const Events = () => {
-  const [currentDate, setCurrentDate] = useState(new Date())
+  const [currentDate, setCurrentDate] = useState(new Date(2025, 9, 1)) // Start at October 2025
   const [selectedEvent, setSelectedEvent] = useState(null)
+  const [selectedDate, setSelectedDate] = useState(null)
 
   const events = [
     {
       id: 1,
       title: "Annual Youth Conference",
-      date: new Date(2024, 2, 15), // March 15, 2024
+      date: new Date(2025, 9, 5), // October 5, 2025
       time: "9:00 AM - 5:00 PM",
       location: "Accra International Conference Centre",
       description: "Join us for an inspiring weekend of worship, fellowship, and spiritual growth.",
@@ -19,7 +20,7 @@ const Events = () => {
     {
       id: 2,
       title: "Weekly Bible Study",
-      date: new Date(2024, 2, 20), // March 20, 2024
+      date: new Date(2025, 9, 12), // October 12, 2025
       time: "7:00 PM - 8:30 PM",
       location: "Main Sanctuary",
       description: "Deep dive into God's word with our weekly Bible study sessions.",
@@ -28,7 +29,7 @@ const Events = () => {
     {
       id: 3,
       title: "Community Service Day",
-      date: new Date(2024, 3, 20), // April 20, 2024
+      date: new Date(2025, 9, 19), // October 19, 2025
       time: "8:00 AM - 2:00 PM",
       location: "Various Locations",
       description: "Making a difference in our community through service and love.",
@@ -37,7 +38,7 @@ const Events = () => {
     {
       id: 4,
       title: "Youth Prayer Meeting",
-      date: new Date(2024, 2, 27), // March 27, 2024
+      date: new Date(2025, 9, 26), // October 26, 2025
       time: "6:00 PM - 7:30 PM",
       location: "Youth Hall",
       description: "Come together in prayer and worship.",
@@ -47,7 +48,16 @@ const Events = () => {
 
   const monthStart = startOfMonth(currentDate)
   const monthEnd = endOfMonth(currentDate)
-  const calendarDays = eachDayOfInterval({ start: monthStart, end: monthEnd })
+  
+  // Get the start of the week for the first day of the month
+  const calendarStart = new Date(monthStart)
+  calendarStart.setDate(calendarStart.getDate() - calendarStart.getDay())
+  
+  // Get the end of the week for the last day of the month
+  const calendarEnd = new Date(monthEnd)
+  calendarEnd.setDate(calendarEnd.getDate() + (6 - calendarEnd.getDay()))
+  
+  const calendarDays = eachDayOfInterval({ start: calendarStart, end: calendarEnd })
 
   const nextMonth = () => {
     setCurrentDate(addMonths(currentDate, 1))
@@ -69,6 +79,18 @@ const Events = () => {
       prayer: styles.prayer
     }
     return typeClasses[type] || ''
+  }
+
+  const handleDateClick = (date) => {
+    setSelectedDate(date)
+    const dayEvents = getEventsForDate(date)
+    if (dayEvents.length > 0) {
+      setSelectedEvent(dayEvents[0]) // Show first event for that day
+    }
+  }
+
+  const isDateSelected = (date) => {
+    return selectedDate && isSameDay(date, selectedDate)
   }
 
   return (
@@ -108,7 +130,8 @@ const Events = () => {
                   return (
                     <div 
                       key={index} 
-                      className={`${styles.calendarDay} ${!isCurrentMonth ? styles.otherMonth : ''} ${isTodayDate ? styles.today : ''}`}
+                      className={`${styles.calendarDay} ${!isCurrentMonth ? styles.otherMonth : ''} ${isTodayDate ? styles.today : ''} ${isDateSelected(day) ? styles.selected : ''}`}
+                      onClick={() => handleDateClick(day)}
                     >
                       <span className={styles.dayNumber}>{format(day, 'd')}</span>
                       {dayEvents.length > 0 && (
@@ -118,6 +141,10 @@ const Events = () => {
                               key={event.id} 
                               className={`${styles.eventDot} ${getEventTypeClass(event.type)}`}
                               title={event.title}
+                              onClick={(e) => {
+                                e.stopPropagation()
+                                setSelectedEvent(event)
+                              }}
                             />
                           ))}
                           {dayEvents.length > 2 && (
@@ -134,9 +161,21 @@ const Events = () => {
 
           {/* Events List */}
           <div className={styles.eventsList}>
-            <h3>Upcoming Events</h3>
+            <div className={styles.eventsListHeader}>
+              <h3>
+                {selectedDate ? `Events for ${format(selectedDate, 'MMMM d, yyyy')}` : 'Upcoming Events'}
+              </h3>
+              {selectedDate && (
+                <button 
+                  className={styles.clearBtn}
+                  onClick={() => setSelectedDate(null)}
+                >
+                  Show All Events
+                </button>
+              )}
+            </div>
             <div className={styles.eventsGrid}>
-              {events.map(event => (
+              {(selectedDate ? getEventsForDate(selectedDate) : events).map(event => (
                 <div key={event.id} className={styles.eventCard}>
                   <div className={styles.eventDate}>
                     <span className={styles.eventDay}>{format(event.date, 'd')}</span>

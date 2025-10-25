@@ -16,10 +16,10 @@ const About = () => {
           <div className={styles.heroText}>
             <p>
               We are a vibrant and dynamic community of young people ignited by the power of the Holy Spirit, 
-              passionately committed to living out the 2024 theme:
+              passionately committed to living out the 2025 theme:
             </p>
             <a href="#" className={styles.themeLink}>
-              "A People of God Unleashed to Transform Their World."
+              "Unleashed to Live a Life Worthy of Your Calling"
             </a>
           </div>
         </div>

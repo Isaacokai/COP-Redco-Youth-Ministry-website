@@ -1,8 +1,9 @@
 .footer {
-  background-color: #1a1a1a;
-  color: white;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
   padding: 3rem 0 1rem;
   margin-top: auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -25,13 +26,13 @@
 }
 
 .footerSection h4 {
-  color: #fff;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
 
 .footerSection p {
-  color: #ccc;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -47,7 +48,7 @@
 }
 
 .footerLinks a {
-  color: #ccc;
+  color: var(--text-secondary);
   text-decoration: none;
   transition: all 0.3s ease;
   padding: 4px 8px;
@@ -84,7 +85,7 @@
 }
 
 .contactInfo p {
-  color: #ccc;
+  color: var(--text-secondary);
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
@@ -92,10 +93,10 @@
 }
 
 .footerBottom {
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--border-color);
   padding-top: 1rem;
   text-align: center;
-  color: #999;
+  color: var(--text-secondary);
 }
 
 .footerBottom p {

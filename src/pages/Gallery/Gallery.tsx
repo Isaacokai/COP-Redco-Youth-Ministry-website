@@ -1,8 +1,17 @@
 import { useState } from 'react'
 import styles from './Gallery.module.css'
 
+interface Photo {
+  id: number
+  src: string
+  alt: string
+  category: string
+  title: string
+  date: string
+}
+
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState(null)
+  const [selectedImage, setSelectedImage] = useState<Photo | null>(null)
   const [selectedCategory, setSelectedCategory] = useState('all')
 
   const categories = [
@@ -116,7 +125,7 @@ const Gallery = () => {
     ? photos 
     : photos.filter(photo => photo.category === selectedCategory)
 
-  const openModal = (photo) => {
+  const openModal = (photo: Photo) => {
     setSelectedImage(photo)
   }
 
@@ -125,15 +134,19 @@ const Gallery = () => {
   }
 
   const nextImage = () => {
-    const currentIndex = filteredPhotos.findIndex(photo => photo.id === selectedImage.id)
-    const nextIndex = (currentIndex + 1) % filteredPhotos.length
-    setSelectedImage(filteredPhotos[nextIndex])
+    if (selectedImage) {
+      const currentIndex = filteredPhotos.findIndex(photo => photo.id === selectedImage.id)
+      const nextIndex = (currentIndex + 1) % filteredPhotos.length
+      setSelectedImage(filteredPhotos[nextIndex])
+    }
   }
 
   const prevImage = () => {
-    const currentIndex = filteredPhotos.findIndex(photo => photo.id === selectedImage.id)
-    const prevIndex = currentIndex === 0 ? filteredPhotos.length - 1 : currentIndex - 1
-    setSelectedImage(filteredPhotos[prevIndex])
+    if (selectedImage) {
+      const currentIndex = filteredPhotos.findIndex(photo => photo.id === selectedImage.id)
+      const prevIndex = currentIndex === 0 ? filteredPhotos.length - 1 : currentIndex - 1
+      setSelectedImage(filteredPhotos[prevIndex])
+    }
   }
 
   return (

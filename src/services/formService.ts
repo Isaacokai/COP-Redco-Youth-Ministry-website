@@ -28,6 +28,14 @@ export interface RegistrationFormData {
   terms: boolean
 }
 
+export interface PrayerRequestData {
+  name: string
+  email: string
+  phone?: string
+  request: string
+  isAnonymous: boolean
+}
+
 // Simulate form submission to backend
 export const submitContactForm = async (data: ContactFormData): Promise<boolean> => {
   try {
@@ -76,7 +84,7 @@ export const submitRegistrationForm = async (data: RegistrationFormData): Promis
 }
 
 // Email service integration examples
-export const sendEmailNotification = async (formData: any, type: 'contact' | 'registration') => {
+export const sendEmailNotification = async (formData: any, type: 'contact' | 'registration' | 'prayer') => {
   // Example integrations:
   
   // 1. EmailJS (Client-side email sending)

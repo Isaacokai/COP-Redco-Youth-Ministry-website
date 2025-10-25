@@ -85,8 +85,8 @@ const Blog = () => {
     ? blogPosts 
     : blogPosts.filter(post => post.category === selectedCategory)
 
-  const getCategoryColor = (category) => {
-    const colors = {
+  const getCategoryColor = (category: string) => {
+    const colors: Record<string, string> = {
       devotion: '#28a745',
       news: '#007bff',
       testimony: '#dc3545',

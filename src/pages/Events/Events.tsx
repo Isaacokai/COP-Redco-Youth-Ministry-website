@@ -2,10 +2,20 @@ import { useState } from 'react'
 import { format, addMonths, subMonths, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay, isToday } from 'date-fns'
 import styles from './Events.module.css'
 
+interface Event {
+  id: number
+  title: string
+  date: Date
+  time: string
+  location: string
+  description: string
+  type: string
+}
+
 const Events = () => {
   const [currentDate, setCurrentDate] = useState(new Date(2025, 9, 1)) // Start at October 2025
-  const [selectedEvent, setSelectedEvent] = useState(null)
-  const [selectedDate, setSelectedDate] = useState(null)
+  const [selectedEvent, setSelectedEvent] = useState<Event | null>(null)
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null)
 
   const events = [
     {
@@ -67,12 +77,12 @@ const Events = () => {
     setCurrentDate(subMonths(currentDate, 1))
   }
 
-  const getEventsForDate = (date) => {
+  const getEventsForDate = (date: Date) => {
     return events.filter(event => isSameDay(event.date, date))
   }
 
-  const getEventTypeClass = (type) => {
-    const typeClasses = {
+  const getEventTypeClass = (type: string) => {
+    const typeClasses: Record<string, string> = {
       conference: styles.conference,
       study: styles.study,
       service: styles.service,
@@ -81,7 +91,7 @@ const Events = () => {
     return typeClasses[type] || ''
   }
 
-  const handleDateClick = (date) => {
+  const handleDateClick = (date: Date) => {
     setSelectedDate(date)
     const dayEvents = getEventsForDate(date)
     if (dayEvents.length > 0) {
@@ -89,7 +99,7 @@ const Events = () => {
     }
   }
 
-  const isDateSelected = (date) => {
+  const isDateSelected = (date: Date) => {
     return selectedDate && isSameDay(date, selectedDate)
   }
 

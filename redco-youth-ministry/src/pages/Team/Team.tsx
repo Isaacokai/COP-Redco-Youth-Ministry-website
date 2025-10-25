@@ -5,42 +5,42 @@ const Team = () => {
     {
       name: "Apostle Ebenezer Hagan",
       title: "Youth Director",
-      image: "/api/placeholder/200/200"
+      image: "/images/team/rectangle-2.jpg"
     },
     {
       name: "Elder Prof. Eric Appau Asante",
       title: "Deputy Youth Director",
-      image: "/api/placeholder/200/200"
+      image: "/images/team/rectangle-3.png"
     },
     {
       name: "Pastor Gordon Ansah",
       title: "National Secretary",
-      image: "/api/placeholder/200/200"
+      image: "/images/team/rectangle-4.png"
     },
     {
       name: "Pastor Philip Pascal Asiedu",
       title: "Nec Member",
-      image: "/api/placeholder/200/200"
+      image: "/images/team/rectangle-7.png"
     },
     {
       name: "Elder Joseph Selorm Tetteh",
       title: "Nec Member",
-      image: "/api/placeholder/200/200"
+      image: "/images/team/rectangle-8.png"
     },
     {
       name: "Dcns. Mrs. Comfort Worna",
       title: "Nec Member",
-      image: "/api/placeholder/200/200"
+      image: "/images/team/rectangle-9.png"
     },
     {
       name: "Mrs. Priscilla Yirebi",
       title: "Nec Member",
-      image: "/api/placeholder/200/200"
+      image: "/images/team/rectangle-10.png"
     },
     {
       name: "Elder Edward Ntiamoah",
       title: "Pensa Ghana Coordinator",
-      image: "/api/placeholder/200/200"
+      image: "/images/team/rectangle-11.png"
     }
   ]
 

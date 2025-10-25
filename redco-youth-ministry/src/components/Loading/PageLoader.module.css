@@ -1,0 +1,50 @@
+.pageLoader {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
+.loadingContent {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.skeletonContainer {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.skeletonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.pageContent {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skeletonGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .loadingContent {
+    padding: 1rem;
+  }
+}

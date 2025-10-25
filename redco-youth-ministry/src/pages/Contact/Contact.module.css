@@ -1,7 +1,8 @@
 .contact {
   min-height: 100vh;
   padding: 4rem 0;
-  background-color: #f8f9fa;
+  background-color: var(--bg-secondary);
+  transition: background-color 0.3s ease;
 }
 
 .container {
@@ -18,13 +19,13 @@
 .header h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
 .header p {
   font-size: 1.2rem;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .contactContent {
@@ -35,22 +36,23 @@
 
 /* Contact Information */
 .contactInfo {
-  background: white;
+  background: var(--bg-primary);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px var(--shadow);
   height: fit-content;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contactInfo h2 {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
 .contactInfo > p {
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 2rem;
 }
@@ -65,9 +67,9 @@
 .infoCard {
   text-align: center;
   padding: 1.5rem;
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   border-radius: 8px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .infoCard:hover {
@@ -82,12 +84,12 @@
 .infoCard h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
 .infoCard p {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 0.9rem;
   line-height: 1.4;
   white-space: pre-line;
@@ -95,14 +97,14 @@
 }
 
 .socialMedia {
-  border-top: 1px solid #e9ecef;
+  border-top: 1px solid var(--border-color);
   padding-top: 2rem;
 }
 
 .socialMedia h3 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
@@ -116,7 +118,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  color: #666;
+  color: var(--text-secondary);
   text-decoration: none;
   padding: 0.75rem;
   border-radius: 6px;
@@ -124,8 +126,8 @@
 }
 
 .socialLink:hover {
-  background: #f8f9fa;
-  color: #2c5aa0;
+  background: var(--bg-secondary);
+  color: var(--primary-color);
 }
 
 .socialIcon {
@@ -134,16 +136,17 @@
 
 /* Contact Form */
 .contactForm {
-  background: white;
+  background: var(--bg-primary);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px var(--shadow);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contactForm h2 {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
 }
 
@@ -175,7 +178,7 @@
 
 .formGroup label {
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
@@ -183,34 +186,36 @@
 .formGroup select,
 .formGroup textarea {
   padding: 0.75rem;
-  border: 2px solid #e9ecef;
+  border: 2px solid var(--border-color);
   border-radius: 6px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .formGroup input:focus,
 .formGroup select:focus,
 .formGroup textarea:focus {
   outline: none;
-  border-color: #2c5aa0;
+  border-color: var(--primary-color);
   box-shadow: 0 0 0 2px rgba(44, 90, 160, 0.2);
 }
 
 .formGroup input.error,
 .formGroup select.error,
 .formGroup textarea.error {
-  border-color: #dc3545;
+  border-color: var(--danger-color);
 }
 
 .errorMessage {
-  color: #dc3545;
+  color: var(--danger-color);
   font-size: 0.8rem;
   margin-top: 0.25rem;
 }
 
 .submitBtn {
-  background: #2c5aa0;
+  background: var(--primary-color);
   color: white;
   border: none;
   padding: 0.75rem 2rem;
@@ -223,7 +228,7 @@
 }
 
 .submitBtn:hover {
-  background: #1e3f73;
+  background: var(--primary-hover);
 }
 
 /* Responsive Design */

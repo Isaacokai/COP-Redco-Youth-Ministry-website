@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import ThemeToggle from '../ThemeToggle/ThemeToggle'
 import styles from './Header.module.css'
 
 const Header = () => {
@@ -33,6 +34,10 @@ const Header = () => {
           <Link to="/" onClick={handleLinkClick}>
             <h2>REDCO Youth Ministry</h2>
           </Link>
+        </div>
+        
+        <div className={styles.themeToggleContainer}>
+          <ThemeToggle />
         </div>
         
         <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
@@ -98,6 +103,15 @@ const Header = () => {
                 onClick={handleLinkClick}
               >
                 Contact
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/prayer" 
+                className={`${styles.navLink} ${location.pathname === '/prayer' ? styles.active : ''}`}
+                onClick={handleLinkClick}
+              >
+                Prayer
               </Link>
             </li>
             <li>

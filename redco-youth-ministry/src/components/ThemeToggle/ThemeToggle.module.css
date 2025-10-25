@@ -1,0 +1,91 @@
+.themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.themeToggle:hover {
+  transform: scale(1.05);
+}
+
+.themeToggle:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.toggleTrack {
+  width: 50px;
+  height: 24px;
+  background: #e0e0e0;
+  border-radius: 12px;
+  position: relative;
+  transition: background-color 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.toggleTrack.dark {
+  background: #4a5568;
+}
+
+.toggleThumb {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggleTrack.dark .toggleThumb {
+  transform: translateX(26px);
+  background: #2d3748;
+}
+
+.sunIcon,
+.moonIcon {
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .toggleTrack {
+  background: #4a5568;
+  border-color: #2d3748;
+}
+
+[data-theme="dark"] .toggleThumb {
+  background: #2d3748;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .toggleTrack {
+    width: 45px;
+    height: 22px;
+  }
+  
+  .toggleThumb {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .toggleTrack.dark .toggleThumb {
+    transform: translateX(23px);
+  }
+  
+  .sunIcon,
+  .moonIcon {
+    font-size: 10px;
+  }
+}

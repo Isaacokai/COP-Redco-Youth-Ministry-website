@@ -1,7 +1,8 @@
 .events {
   min-height: 100vh;
   padding: 4rem 0;
-  background-color: #f8f9fa;
+  background-color: var(--bg-secondary);
+  transition: background-color 0.3s ease;
 }
 
 .container {
@@ -18,13 +19,13 @@
 .header h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
 .header p {
   font-size: 1.2rem;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .eventsContent {
@@ -36,10 +37,11 @@
 
 /* Calendar Styles */
 .calendarSection {
-  background: white;
+  background: var(--bg-primary);
   border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px var(--shadow);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .calendarHeader {
@@ -52,12 +54,12 @@
 .calendarHeader h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin: 0;
 }
 
 .calendarNav {
-  background: #2c5aa0;
+  background: var(--primary-color);
   color: white;
   border: none;
   padding: 8px 16px;
@@ -68,7 +70,7 @@
 }
 
 .calendarNav:hover {
-  background: #1e3f73;
+  background: var(--primary-hover);
 }
 
 .calendar {
@@ -86,19 +88,19 @@
   text-align: center;
   padding: 0.5rem;
   font-weight: 600;
-  color: #666;
-  background-color: #f8f9fa;
+  color: var(--text-secondary);
+  background-color: var(--bg-secondary);
 }
 
 .calendarGrid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 1px;
-  background-color: #e9ecef;
+  background-color: var(--border-color);
 }
 
 .calendarDay {
-  background: white;
+  background: var(--bg-primary);
   min-height: 80px;
   padding: 0.5rem;
   display: flex;
@@ -106,19 +108,21 @@
   position: relative;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  color: var(--text-primary);
 }
 
 .calendarDay:hover {
-  background-color: #f8f9fa;
+  background-color: var(--bg-secondary);
 }
 
 .calendarDay.otherMonth {
-  background-color: #f8f9fa;
-  color: #999;
+  background-color: var(--bg-secondary);
+  color: var(--text-muted);
 }
 
 .calendarDay.today {
-  background-color: #e3f2fd;
+  background-color: var(--primary-color);
+  color: white;
 }
 
 .dayNumber {
@@ -158,22 +162,23 @@
 
 .moreEvents {
   font-size: 0.7rem;
-  color: #666;
+  color: var(--text-secondary);
   font-weight: 600;
 }
 
 /* Events List */
 .eventsList {
-  background: white;
+  background: var(--bg-primary);
   border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px var(--shadow);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .eventsList h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
 }
 
@@ -187,13 +192,14 @@
   display: flex;
   gap: 1rem;
   padding: 1.5rem;
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   transition: all 0.3s ease;
+  background: var(--bg-primary);
 }
 
 .eventCard:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px var(--shadow);
   transform: translateY(-2px);
 }
 
@@ -201,7 +207,7 @@
   text-align: center;
   min-width: 60px;
   padding: 0.5rem;
-  background: #2c5aa0;
+  background: var(--primary-color);
   color: white;
   border-radius: 6px;
   display: flex;
@@ -227,19 +233,19 @@
 .eventDetails h4 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
 .eventTime,
 .eventLocation {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 0.9rem;
   margin-bottom: 0.25rem;
 }
 
 .eventDescription {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 0.9rem;
   margin-bottom: 1rem;
   line-height: 1.4;
@@ -292,7 +298,7 @@
 }
 
 .modalContent {
-  background: white;
+  background: var(--bg-primary);
   border-radius: 12px;
   padding: 2rem;
   max-width: 500px;
@@ -300,6 +306,7 @@
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
+  transition: background-color 0.3s ease;
 }
 
 .closeBtn {
@@ -310,30 +317,31 @@
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .closeBtn:hover {
-  color: #333;
+  color: var(--text-primary);
 }
 
 .modalContent h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
 }
 
 .eventInfo {
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   padding: 1rem;
   border-radius: 6px;
   margin-bottom: 1.5rem;
+  transition: background-color 0.3s ease;
 }
 
 .eventInfo p {
   margin-bottom: 0.5rem;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .registrationForm {
@@ -349,27 +357,30 @@
 
 .formGroup label {
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
 .formGroup input,
 .formGroup select {
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   font-size: 1rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .formGroup input:focus,
 .formGroup select:focus {
   outline: none;
-  border-color: #2c5aa0;
+  border-color: var(--primary-color);
   box-shadow: 0 0 0 2px rgba(44, 90, 160, 0.2);
 }
 
 .submitBtn {
-  background: #2c5aa0;
+  background: var(--primary-color);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -381,7 +392,7 @@
 }
 
 .submitBtn:hover {
-  background: #1e3f73;
+  background: var(--primary-hover);
 }
 
 /* Responsive Design */

@@ -1,7 +1,7 @@
-.registration {
+.prayerRequests {
   min-height: 100vh;
   padding: 4rem 0;
-  background-color: var(--bg-secondary);
+  background: var(--bg-primary);
   transition: background-color 0.3s ease;
 }
 
@@ -28,74 +28,23 @@
   color: var(--text-secondary);
   max-width: 800px;
   margin: 0 auto;
-}
-
-.registrationContent {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-
-/* Benefits Section */
-.benefitsSection {
-  background: var(--bg-primary);
-  padding: 3rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px var(--shadow);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.benefitsSection h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.benefitsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.benefitCard {
-  text-align: center;
-  padding: 2rem;
-  background: var(--bg-secondary);
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-.benefitCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px var(--shadow);
-}
-
-.benefitIcon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.benefitCard h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
-}
-
-.benefitCard p {
-  color: var(--text-secondary);
   line-height: 1.6;
 }
 
-/* Registration Form */
-.registrationForm {
-  background: var(--bg-primary);
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Prayer Form */
+.prayerForm {
+  background: var(--bg-secondary);
   padding: 3rem;
   border-radius: 12px;
   box-shadow: 0 5px 20px var(--shadow);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .formHeader {
@@ -104,24 +53,23 @@
 }
 
 .formHeader h2 {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
 .formHeader p {
   color: var(--text-secondary);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .successMessage {
-  background: #d4edda;
-  color: #155724;
+  background: var(--success-color);
+  color: white;
   padding: 2rem;
   border-radius: 8px;
   margin-bottom: 2rem;
-  border: 1px solid #c3e6cb;
   text-align: center;
 }
 
@@ -129,6 +77,21 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
+}
+
+.successMessage p {
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.successMessage ul {
+  text-align: left;
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.successMessage li {
+  margin-bottom: 0.5rem;
 }
 
 .form {
@@ -180,9 +143,9 @@
   border: 2px solid var(--border-color);
   border-radius: 6px;
   font-size: 1rem;
-  background-color: var(--bg-primary);
+  background: var(--bg-primary);
   color: var(--text-primary);
-  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .formGroup input:focus,
@@ -257,18 +220,113 @@
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  align-self: center;
-  min-width: 200px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 50px;
 }
 
-.submitBtn:hover {
+.submitBtn:hover:not(:disabled) {
   background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Prayer Info */
+.prayerInfo {
+  background: var(--bg-secondary);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.prayerInfo h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.infoCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.infoCard {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--bg-primary);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-2px);
+}
+
+.infoIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.infoCard h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.infoCard p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.prayerVerses {
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+}
+
+.prayerVerses h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.prayerVerses blockquote {
+  background: var(--bg-primary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--primary-color);
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+.prayerVerses cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: normal;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .registration {
+  .prayerRequests {
     padding: 2rem 0;
   }
   
@@ -276,44 +334,42 @@
     font-size: 2rem;
   }
   
-  .benefitsSection,
-  .registrationForm {
-    padding: 2rem;
-  }
-  
-  .benefitsGrid {
+  .content {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2rem;
   }
   
-  .benefitCard {
-    padding: 1.5rem;
+  .prayerForm,
+  .prayerInfo {
+    padding: 2rem;
   }
   
   .formRow {
     grid-template-columns: 1fr;
   }
   
-  .checkboxLabel {
-    font-size: 0.9rem;
+  .infoCards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .submitBtn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .benefitsSection,
-  .registrationForm {
+  .prayerForm,
+  .prayerInfo {
     padding: 1.5rem;
   }
   
-  .benefitCard {
+  .infoCard {
     padding: 1rem;
   }
   
-  .benefitIcon {
-    font-size: 2.5rem;
-  }
-  
-  .formSection h3 {
-    font-size: 1.1rem;
+  .prayerVerses blockquote {
+    padding: 1rem;
   }
 }

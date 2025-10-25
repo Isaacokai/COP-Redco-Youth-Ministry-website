@@ -40,8 +40,8 @@ const Footer = () => {
             <ul className={styles.footerLinks}>
               <li><Link to="/gallery" onClick={handleLinkClick}>Gallery</Link></li>
               <li><Link to="/blog" onClick={handleLinkClick}>Blog</Link></li>
+              <li><Link to="/prayer" onClick={handleLinkClick}>Prayer Requests</Link></li>
               <li><Link to="/contact" onClick={handleLinkClick}>Contact Us</Link></li>
-              <li><Link to="/register" onClick={handleLinkClick}>Member Registration</Link></li>
             </ul>
           </div>
           

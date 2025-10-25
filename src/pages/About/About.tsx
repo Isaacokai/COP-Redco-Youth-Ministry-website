@@ -7,7 +7,7 @@ const About = () => {
       <section className={styles.hero}>
         <div className={styles.heroImage}>
           <img 
-            src="/images/about/1-1.png" 
+            src="./images/about/1-1.png" 
             alt="Youth Ministry Gathering" 
             className={styles.heroImg}
           />
@@ -59,7 +59,7 @@ const About = () => {
           <div className={styles.localsGrid}>
             <div className={styles.localCard}>
               <div className={styles.localImage}>
-                <img src="/images/about/OIP.webp" alt="Redco Central" />
+                <img src="./images/about/OIP.webp" alt="Redco Central" />
               </div>
               <div className={styles.localCardContent}>
                 <h3 className={styles.localName}>Redco Central</h3>
@@ -69,7 +69,7 @@ const About = () => {
             
             <div className={styles.localCard}>
               <div className={styles.localImage}>
-                <img src="/images/about/OIP.webp" alt="Dar-Es-Salaam Akan" />
+                <img src="./images/about/OIP.webp" alt="Dar-Es-Salaam Akan" />
               </div>
               <div className={styles.localCardContent}>
                 <h3 className={styles.localName}>Dar-Es-Salaam Akan</h3>
@@ -79,7 +79,7 @@ const About = () => {
             
             <div className={styles.localCard}>
               <div className={styles.localImage}>
-                <img src="/images/about/OIP.webp" alt="Ebenezer" />
+                <img src="./images/about/OIP.webp" alt="Ebenezer" />
               </div>
               <div className={styles.localCardContent}>
                 <h3 className={styles.localName}>Ebenezer</h3>
@@ -89,7 +89,7 @@ const About = () => {
             
             <div className={styles.localCard}>
               <div className={styles.localImage}>
-                <img src="/images/about/OIP.webp" alt="Redco English" />
+                <img src="./images/about/OIP.webp" alt="Redco English" />
               </div>
               <div className={styles.localCardContent}>
                 <h3 className={styles.localName}>Redco English</h3>
@@ -99,7 +99,7 @@ const About = () => {
             
             <div className={styles.localCard}>
               <div className={styles.localImage}>
-                <img src="/images/about/OIP.webp" alt="Dar-Es-Salaam English" />
+                <img src="./images/about/OIP.webp" alt="Dar-Es-Salaam English" />
               </div>
               <div className={styles.localCardContent}>
                 <h3 className={styles.localName}>Dar-Es-Salaam English</h3>
@@ -109,7 +109,7 @@ const About = () => {
             
             <div className={styles.localCard}>
               <div className={styles.localImage}>
-                <img src="/images/about/OIP.webp" alt="Redco EWE" />
+                <img src="./images/about/OIP.webp" alt="Redco EWE" />
               </div>
               <div className={styles.localCardContent}>
                 <h3 className={styles.localName}>Redco EWE</h3>

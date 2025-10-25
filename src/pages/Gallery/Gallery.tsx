@@ -25,7 +25,7 @@ const Gallery = () => {
   const photos = [
     {
       id: 1,
-      src: '/images/home/Youth Ministry Gathering.png',
+      src: './images/home/Youth Ministry Gathering.png',
       alt: 'Youth Conference 2024',
       category: 'events',
       title: 'Annual Youth Conference',
@@ -33,7 +33,7 @@ const Gallery = () => {
     },
     {
       id: 2,
-      src: '/api/placeholder/400/300',
+      src: './api/placeholder/400/300',
       alt: 'Sunday Worship Service',
       category: 'worship',
       title: 'Sunday Worship Service',
@@ -41,7 +41,7 @@ const Gallery = () => {
     },
     {
       id: 3,
-      src: '/images/home/Youth Ministry Gathering.png',
+      src: './images/home/Youth Ministry Gathering.png',
       alt: 'Youth Fellowship',
       category: 'fellowship',
       title: 'Youth Fellowship Night',
@@ -49,7 +49,7 @@ const Gallery = () => {
     },
     {
       id: 4,
-      src: '/api/placeholder/400/300',
+      src: './api/placeholder/400/300',
       alt: 'Community Service',
       category: 'service',
       title: 'Community Clean-up',
@@ -57,7 +57,7 @@ const Gallery = () => {
     },
     {
       id: 5,
-      src: '/api/placeholder/400/300',
+      src: './api/placeholder/400/300',
       alt: 'Bible Study Session',
       category: 'events',
       title: 'Weekly Bible Study',
@@ -65,7 +65,7 @@ const Gallery = () => {
     },
     {
       id: 6,
-      src: '/api/placeholder/400/300',
+      src: './api/placeholder/400/300',
       alt: 'Prayer Meeting',
       category: 'worship',
       title: 'Youth Prayer Meeting',
@@ -73,7 +73,7 @@ const Gallery = () => {
     },
     {
       id: 7,
-      src: '/api/placeholder/400/300',
+      src: './api/placeholder/400/300',
       alt: 'Youth Camp',
       category: 'events',
       title: 'Youth Camp 2024',
@@ -81,7 +81,7 @@ const Gallery = () => {
     },
     {
       id: 8,
-      src: '/api/placeholder/400/300',
+      src: './api/placeholder/400/300',
       alt: 'Christmas Celebration',
       category: 'fellowship',
       title: 'Christmas Celebration',
@@ -89,7 +89,7 @@ const Gallery = () => {
     },
     {
       id: 9,
-      src: '/api/placeholder/400/300',
+      src: './api/placeholder/400/300',
       alt: 'Food Drive',
       category: 'service',
       title: 'Food Drive Initiative',
@@ -97,7 +97,7 @@ const Gallery = () => {
     },
     {
       id: 10,
-      src: '/api/placeholder/400/300',
+      src: './api/placeholder/400/300',
       alt: 'Youth Choir',
       category: 'worship',
       title: 'Youth Choir Performance',
@@ -105,7 +105,7 @@ const Gallery = () => {
     },
     {
       id: 11,
-      src: '/api/placeholder/400/300',
+      src: './api/placeholder/400/300',
       alt: 'Leadership Training',
       category: 'events',
       title: 'Leadership Training Workshop',
@@ -113,7 +113,7 @@ const Gallery = () => {
     },
     {
       id: 12,
-      src: '/api/placeholder/400/300',
+      src: './api/placeholder/400/300',
       alt: 'Mission Trip',
       category: 'service',
       title: 'Mission Trip to Northern Region',

@@ -29,7 +29,7 @@ const Home = () => {
           </div>
           <div className={styles.heroImage}>
             <img 
-              src="/images/home/Youth Ministry Gathering.png" 
+              src="./images/home/Youth Ministry Gathering.png" 
               alt="Youth Ministry Gathering" 
               className={styles.heroImg}
             />
@@ -68,7 +68,7 @@ const Home = () => {
           <div className={styles.eventsGrid}>
             <div className={styles.eventCard}>
               <div className={styles.eventImage}>
-                <img src="/api/placeholder/300/200" alt="Youth Conference" />
+                <img src="./api/placeholder/300/200" alt="Youth Conference" />
               </div>
               <div className={styles.eventContent}>
                 <h3>Annual Youth Conference</h3>
@@ -82,7 +82,7 @@ const Home = () => {
             
             <div className={styles.eventCard}>
               <div className={styles.eventImage}>
-                <img src="/api/placeholder/300/200" alt="Bible Study" />
+                <img src="./api/placeholder/300/200" alt="Bible Study" />
               </div>
               <div className={styles.eventContent}>
                 <h3>Weekly Bible Study</h3>
@@ -96,7 +96,7 @@ const Home = () => {
             
             <div className={styles.eventCard}>
               <div className={styles.eventImage}>
-                <img src="/api/placeholder/300/200" alt="Community Service" />
+                <img src="./api/placeholder/300/200" alt="Community Service" />
               </div>
               <div className={styles.eventContent}>
                 <h3>Community Service Day</h3>

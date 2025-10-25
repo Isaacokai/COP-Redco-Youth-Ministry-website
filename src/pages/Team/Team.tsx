@@ -5,42 +5,42 @@ const Team = () => {
     {
       name: "Apostle Ebenezer Hagan",
       title: "Youth Director",
-      image: "/images/team/rectangle-2.jpg"
+      image: "./images/team/rectangle-2.jpg"
     },
     {
       name: "Elder Prof. Eric Appau Asante",
       title: "Deputy Youth Director",
-      image: "/images/team/rectangle-3.png"
+      image: "./images/team/rectangle-3.png"
     },
     {
       name: "Pastor Gordon Ansah",
       title: "National Secretary",
-      image: "/images/team/rectangle-4.png"
+      image: "./images/team/rectangle-4.png"
     },
     {
       name: "Pastor Philip Pascal Asiedu",
       title: "Nec Member",
-      image: "/images/team/rectangle-7.png"
+      image: "./images/team/rectangle-7.png"
     },
     {
       name: "Elder Joseph Selorm Tetteh",
       title: "Nec Member",
-      image: "/images/team/rectangle-8.png"
+      image: "./images/team/rectangle-8.png"
     },
     {
       name: "Dcns. Mrs. Comfort Worna",
       title: "Nec Member",
-      image: "/images/team/rectangle-9.png"
+      image: "./images/team/rectangle-9.png"
     },
     {
       name: "Mrs. Priscilla Yirebi",
       title: "Nec Member",
-      image: "/images/team/rectangle-10.png"
+      image: "./images/team/rectangle-10.png"
     },
     {
       name: "Elder Edward Ntiamoah",
       title: "Pensa Ghana Coordinator",
-      image: "/images/team/rectangle-11.png"
+      image: "./images/team/rectangle-11.png"
     }
   ]
 
@@ -48,22 +48,22 @@ const Team = () => {
     {
       name: "District Leader 1",
       title: "District Coordinator",
-      image: "/api/placeholder/200/200"
+      image: "./api/placeholder/200/200"
     },
     {
       name: "District Leader 2",
       title: "District Secretary",
-      image: "/api/placeholder/200/200"
+      image: "./api/placeholder/200/200"
     },
     {
       name: "District Leader 3",
       title: "District Treasurer",
-      image: "/api/placeholder/200/200"
+      image: "./api/placeholder/200/200"
     },
     {
       name: "District Leader 4",
       title: "District Member",
-      image: "/api/placeholder/200/200"
+      image: "./api/placeholder/200/200"
     }
   ]
 
@@ -74,7 +74,7 @@ const Team = () => {
         <div className={styles.container}>
           <div className={styles.featuredContent}>
             <div className={styles.featuredImage}>
-              <img src="/images/team/2.png" alt="Team Leadership" className={styles.featuredImg} />
+              <img src="./images/team/2.png" alt="Team Leadership" className={styles.featuredImg} />
             </div>
             <div className={styles.featuredText}>
               <h2 className={styles.featuredTitle}>Our Leadership Team</h2>

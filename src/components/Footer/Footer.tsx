@@ -21,7 +21,7 @@ const Footer = () => {
             <h3>REDCO Youth Ministry</h3>
             <p>
               A vibrant and dynamic community of young people ignited by the power of the Holy Spirit, 
-              passionately committed to living out our 2024 theme: "A People of God Unleashed to Transform Their World."
+              passionately committed to living out our 2025 theme: "Unleashed to Live a Life Worthy of Your Calling."
             </p>
           </div>
           
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
         
         <div className={styles.footerBottom}>
-          <p>&copy; 2024 REDCO Youth Ministry. All rights reserved.</p>
+          <p>&copy; 2025 REDCO Youth Ministry. All rights reserved.</p>
           <p>Part of The Church of Pentecost</p>
         </div>
       </div>

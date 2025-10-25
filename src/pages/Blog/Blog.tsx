@@ -21,7 +21,7 @@ const Blog = () => {
       author: "Pastor Sarah Mensah",
       date: "March 15, 2024",
       category: "devotion",
-      image: "/api/placeholder/400/250",
+      image: "./api/placeholder/400/250",
       readTime: "5 min read"
     },
     {
@@ -32,7 +32,7 @@ const Blog = () => {
       author: "Youth Ministry Team",
       date: "March 10, 2024",
       category: "news",
-      image: "/images/home/Youth Ministry Gathering.png",
+      image: "./images/home/Youth Ministry Gathering.png",
       readTime: "3 min read"
     },
     {
@@ -43,7 +43,7 @@ const Blog = () => {
       author: "Kwame Asante",
       date: "March 8, 2024",
       category: "testimony",
-      image: "/api/placeholder/400/250",
+      image: "./api/placeholder/400/250",
       readTime: "7 min read"
     },
     {
@@ -54,7 +54,7 @@ const Blog = () => {
       author: "Elder Joseph Tetteh",
       date: "March 5, 2024",
       category: "teaching",
-      image: "/api/placeholder/400/250",
+      image: "./api/placeholder/400/250",
       readTime: "6 min read"
     },
     {
@@ -65,7 +65,7 @@ const Blog = () => {
       author: "Community Service Team",
       date: "March 3, 2024",
       category: "news",
-      image: "/api/placeholder/400/250",
+      image: "./api/placeholder/400/250",
       readTime: "4 min read"
     },
     {
@@ -76,7 +76,7 @@ const Blog = () => {
       author: "Pastor Gordon Ansah",
       date: "March 1, 2024",
       category: "teaching",
-      image: "/api/placeholder/400/250",
+      image: "./api/placeholder/400/250",
       readTime: "8 min read"
     }
   ]

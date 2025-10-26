@@ -15,8 +15,8 @@ const Home = () => {
               A vibrant and dynamic community of young people ignited by the power of the Holy Spirit
             </p>
             <p className={styles.heroDescription}>
-              We are passionately committed to living out our 2024 theme: 
-              <strong> "A People of God Unleashed to Transform Their World."</strong>
+              We are passionately committed to living out our 2025 theme: 
+              <strong> "Unleashed to Live a Life Worthy of Your Calling."</strong>
             </p>
             <div className={styles.heroButtons}>
               <Link to="/about" className={styles.btnPrimary}>
@@ -68,7 +68,7 @@ const Home = () => {
           <div className={styles.eventsGrid}>
             <div className={styles.eventCard}>
               <div className={styles.eventImage}>
-                <img src="./api/placeholder/300/200" alt="Youth Conference" />
+                <img src="/images/home/OIP (1).webp" alt="Youth Conference" />
               </div>
               <div className={styles.eventContent}>
                 <h3>Annual Youth Conference</h3>
@@ -82,7 +82,7 @@ const Home = () => {
             
             <div className={styles.eventCard}>
               <div className={styles.eventImage}>
-                <img src="./api/placeholder/300/200" alt="Bible Study" />
+                <img src="/images/home/SP+Weekly.webp" alt="Bible Study" />
               </div>
               <div className={styles.eventContent}>
                 <h3>Weekly Bible Study</h3>
@@ -96,7 +96,7 @@ const Home = () => {
             
             <div className={styles.eventCard}>
               <div className={styles.eventImage}>
-                <img src="./api/placeholder/300/200" alt="Community Service" />
+                <img src="/images/home/maxresdefault.jpg" alt="Community Service" />
               </div>
               <div className={styles.eventContent}>
                 <h3>Community Service Day</h3>

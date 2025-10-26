@@ -25,99 +25,99 @@ const Gallery = () => {
   const photos = [
     {
       id: 1,
-      src: './images/home/Youth Ministry Gathering.png',
+      src: '/images/home/Youth Ministry Gathering.png',
       alt: 'Youth Conference 2024',
       category: 'events',
       title: 'Annual Youth Conference',
-      date: 'March 2024'
+      date: 'October 2024'
     },
     {
       id: 2,
-      src: './api/placeholder/400/300',
+      src: '/images/home/OIP (1).webp',
       alt: 'Sunday Worship Service',
       category: 'worship',
       title: 'Sunday Worship Service',
-      date: 'February 2024'
+      date: 'October 2024'
     },
     {
       id: 3,
-      src: './images/home/Youth Ministry Gathering.png',
+      src: '/images/home/SP+Weekly.webp',
       alt: 'Youth Fellowship',
       category: 'fellowship',
       title: 'Youth Fellowship Night',
-      date: 'February 2024'
+      date: 'October 2024'
     },
     {
       id: 4,
-      src: './api/placeholder/400/300',
+      src: '/images/home/maxresdefault.jpg',
       alt: 'Community Service',
       category: 'service',
-      title: 'Community Clean-up',
-      date: 'January 2024'
+      title: 'Community Service Day',
+      date: 'October 2024'
     },
     {
       id: 5,
-      src: './api/placeholder/400/300',
+      src: '/images/blog/pastor-enoch.jpg',
       alt: 'Bible Study Session',
       category: 'events',
-      title: 'Weekly Bible Study',
-      date: 'January 2024'
+      title: 'Evangelism Training',
+      date: 'October 2024'
     },
     {
       id: 6,
-      src: './api/placeholder/400/300',
+      src: '/images/blog/community-sports.jpg',
       alt: 'Prayer Meeting',
       category: 'worship',
-      title: 'Youth Prayer Meeting',
-      date: 'January 2024'
+      title: 'Community Sports Outreach',
+      date: 'September 2024'
     },
     {
       id: 7,
-      src: './api/placeholder/400/300',
+      src: '/images/blog/rural-evangelism.jpg',
       alt: 'Youth Camp',
       category: 'events',
-      title: 'Youth Camp 2024',
-      date: 'December 2023'
+      title: 'Rural Evangelism',
+      date: 'August 2024'
     },
     {
       id: 8,
-      src: './api/placeholder/400/300',
+      src: '/images/team/2.png',
       alt: 'Christmas Celebration',
       category: 'fellowship',
-      title: 'Christmas Celebration',
-      date: 'December 2023'
+      title: 'Leadership Team Meeting',
+      date: 'August 2024'
     },
     {
       id: 9,
-      src: './api/placeholder/400/300',
+      src: '/images/about/1-1.png',
       alt: 'Food Drive',
       category: 'service',
-      title: 'Food Drive Initiative',
-      date: 'November 2023'
+      title: 'Youth Ministry Gathering',
+      date: 'August 2024'
     },
     {
       id: 10,
-      src: './api/placeholder/400/300',
+      src: '/images/team/rectangle-2.jpg',
       alt: 'Youth Choir',
       category: 'worship',
-      title: 'Youth Choir Performance',
-      date: 'November 2023'
+      title: 'Youth Ministry Leaders',
+      date: 'July 2024'
     },
     {
       id: 11,
-      src: './api/placeholder/400/300',
+      src: '/images/team/rectangle-3.png',
       alt: 'Leadership Training',
       category: 'events',
       title: 'Leadership Training Workshop',
-      date: 'October 2023'
+      date: 'July 2024'
     },
     {
       id: 12,
-      src: './api/placeholder/400/300',
+      src: '/images/team/rectangle-4.png',
       alt: 'Mission Trip',
       category: 'service',
-      title: 'Mission Trip to Northern Region',
-      date: 'October 2023'
+      title: 'Youth Ministers',
+      date: 'June 2024'
     }
   ]
 

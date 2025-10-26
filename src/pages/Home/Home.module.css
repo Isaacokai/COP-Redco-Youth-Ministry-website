@@ -11,16 +11,13 @@
 /* Hero Section */
 .hero {
   background: linear-gradient(135deg, #2c5aa0 0%, #1e3f73 100%);
-  color: white;
   padding: 4rem 0;
   min-height: 80vh;
   display: flex;
   align-items: center;
 }
 
-.hero * {
-  color: white !important;
-}
+/* Text color handled by global CSS with theme awareness */
 
 .heroContent {
   max-width: 1200px;

@@ -15,47 +15,47 @@ const Blog = () => {
   const blogPosts = [
     {
       id: 1,
+      title: "Evangelism, The Lifeline Of The Church - Pastor Sarfo Declares",
+      excerpt: "The Kaneshie Area Youth Pastor and Resident Minister of the Abossey Okai Worship Centre, Pastor Enoch Amoah, emphasizes that evangelism is both a command and a privilege.",
+      content: "Evangelism serves as the lifeline of the church, connecting believers with the Great Commission to share the Gospel message. Pastor Enoch Amoah explains how this mandate transforms lives and communities through the power of the Holy Spirit...",
+      author: "Pastor Enoch Amoah",
+      date: "October 21, 2024",
+      category: "news",
+      image: "/images/blog/pastor-enoch.jpg",
+      readTime: "5 min read"
+    },
+    {
+      id: 2,
+      title: "Prioritize the 'Go and Tell' Mandate ~Pastor David Aryee Urges Believers",
+      excerpt: "The District Pastor of Mt. Zion Worship Centre under the Kaneshie Area, Pastor Inspector David Aryee, challenges believers to engage in community sports outreach.",
+      content: "Pastor David Aryee shares how PENSA-UPSA Missions 2025 demonstrates possessing nations through community sports engagement. This innovative approach combines evangelism with practical community involvement...",
+      author: "Pastor David Aryee",
+      date: "September 08, 2024",
+      category: "news",
+      image: "/images/blog/community-sports.jpg",
+      readTime: "4 min read"
+    },
+    {
+      id: 3,
+      title: "'The Great Commission Is to Go & Tell!' - Aps. Dr. Nyamekye Urges Youth to Win Souls",
+      excerpt: "The Chairman of The Church of Pentecost, Apostle Dr. Eric Kwabena Nyamekye, has charged the youth to actively participate in soul-winning through rural evangelism.",
+      content: "PENSA-UPSA, in collaboration with Jesus Rescue Team and Theovision Ghana, leads transformative rural evangelism in Akim-Oda Area – Over 1,000 souls reached for Christ. This powerful outreach demonstrates the impact of youth-driven evangelism...",
+      author: "Apostle Dr. Eric Nyamekye",
+      date: "August 03, 2024",
+      category: "news",
+      image: "/images/blog/rural-evangelism.jpg",
+      readTime: "6 min read"
+    },
+    {
+      id: 4,
       title: "Walking in Faith: A Youth's Journey",
       excerpt: "Discover how young people are finding their purpose and calling in today's world through faith and determination.",
       content: "In a world filled with uncertainty and challenges, young people are finding strength and direction through their faith. This journey of discovery is not always easy, but it is filled with hope and purpose...",
       author: "Pastor Sarah Mensah",
       date: "March 15, 2024",
       category: "devotion",
-      image: "./api/placeholder/400/250",
+      image: "/images/home/Youth Ministry Gathering.png",
       readTime: "5 min read"
-    },
-    {
-      id: 2,
-      title: "Annual Youth Conference 2024: A Success Story",
-      excerpt: "Over 2,000 young people gathered for an inspiring weekend of worship, fellowship, and spiritual growth.",
-      content: "The 2024 Annual Youth Conference was a remarkable success, bringing together young people from across the region for a weekend of spiritual renewal and fellowship...",
-      author: "Youth Ministry Team",
-      date: "March 10, 2024",
-      category: "news",
-      image: "./images/home/Youth Ministry Gathering.png",
-      readTime: "3 min read"
-    },
-    {
-      id: 3,
-      title: "From Darkness to Light: A Personal Testimony",
-      excerpt: "A young person shares their powerful story of transformation and redemption through faith.",
-      content: "My name is Kwame, and I want to share with you how God transformed my life from a place of darkness and despair to one of hope and purpose...",
-      author: "Kwame Asante",
-      date: "March 8, 2024",
-      category: "testimony",
-      image: "./api/placeholder/400/250",
-      readTime: "7 min read"
-    },
-    {
-      id: 4,
-      title: "Understanding God's Love for Young People",
-      excerpt: "A deep dive into how God's unconditional love speaks to the hearts of young believers today.",
-      content: "God's love is not conditional on our age, our past, or our circumstances. It is a love that reaches out to every young heart, offering hope and transformation...",
-      author: "Elder Joseph Tetteh",
-      date: "March 5, 2024",
-      category: "teaching",
-      image: "./api/placeholder/400/250",
-      readTime: "6 min read"
     },
     {
       id: 5,
@@ -65,7 +65,7 @@ const Blog = () => {
       author: "Community Service Team",
       date: "March 3, 2024",
       category: "news",
-      image: "./api/placeholder/400/250",
+      image: "/images/home/SP+Weekly.webp",
       readTime: "4 min read"
     },
     {
@@ -76,7 +76,7 @@ const Blog = () => {
       author: "Pastor Gordon Ansah",
       date: "March 1, 2024",
       category: "teaching",
-      image: "./api/placeholder/400/250",
+      image: "/images/home/OIP (1).webp",
       readTime: "8 min read"
     }
   ]

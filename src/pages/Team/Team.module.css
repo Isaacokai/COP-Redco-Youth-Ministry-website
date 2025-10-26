@@ -6,13 +6,10 @@
 /* Featured Section */
 .featuredSection {
   background: linear-gradient(135deg, #2c5aa0 0%, #1e3f73 100%);
-  color: white;
   padding: 4rem 0;
 }
 
-.featuredSection * {
-  color: white !important;
-}
+/* Text color handled by global CSS with theme awareness */
 
 .featuredContent {
   display: grid;
@@ -164,16 +161,13 @@
 
 .missionSection {
   background: linear-gradient(135deg, #2c5aa0 0%, #1e3f73 100%);
-  color: white;
   padding: 3rem;
   border-radius: 12px;
   text-align: center;
   margin: 4rem 0 6rem 0;
 }
 
-.missionSection * {
-  color: white !important;
-}
+/* Text color handled by global CSS with theme awareness */
 
 .missionSection h2 {
   font-size: 2rem;

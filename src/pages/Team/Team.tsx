@@ -74,7 +74,7 @@ const Team = () => {
         <div className={styles.container}>
           <div className={styles.featuredContent}>
             <div className={styles.featuredImage}>
-              <img src="./images/team/2.png" alt="Team Leadership" className={styles.featuredImg} />
+              <img src="/images/team/2.png" alt="Team Leadership" className={styles.featuredImg} />
             </div>
             <div className={styles.featuredText}>
               <h2 className={styles.featuredTitle}>Our Leadership Team</h2>
